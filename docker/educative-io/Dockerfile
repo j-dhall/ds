@@ -5,8 +5,14 @@
 
 #2
 #Hosting a website
-FROM nginx:1.15
-COPY index.html /usr/share/nginx/html
+#FROM nginx:1.15
+#COPY index.html /usr/share/nginx/html
 
 #3
 #Sharing files from volume, between two containers
+
+#4
+#Run a JavaScript program on Node.JS
+FROM node:11-alpine
+WORKDIR /src
+CMD ["node", "compute.js"]
